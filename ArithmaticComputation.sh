@@ -12,3 +12,6 @@ echo "a * b + c = $comp2"
 
 comp3=$(($c+$a/$b))
 echo "c + a / b = $comp3"
+
+comp4=$(($a%$b+$b))
+echo "a % b + c = $comp4"
