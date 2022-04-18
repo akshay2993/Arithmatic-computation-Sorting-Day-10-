@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/bin/bash -x
+
 
 echo "Welcome to Arithmatic Computation & Sorting Problem!"
 
@@ -15,3 +16,13 @@ echo "c + a / b = $comp3"
 
 comp4=$(($a%$b+$b))
 echo "a % b + c = $comp4"
+
+declare -A result
+
+for ((i=1;i<=4;i++))
+do
+	result[$i]="$comp$i"
+done
+
+echo "${result[@]}"
+echo "${!result[@]}"
